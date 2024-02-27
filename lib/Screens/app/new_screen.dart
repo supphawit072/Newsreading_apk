@@ -196,7 +196,7 @@ class _NewPageState extends State<NewPage> {
                               LikeButton(
                                 onLiked: () {
                                   setState(() {
-                                    dataList[index].isLiked = true;
+                                    dataList[index].isLiked = false;
                                     likedNewsList.add(dataList[index]);
                                   });
                                 },
@@ -230,11 +230,6 @@ void _logout(BuildContext context) {
     MaterialPageRoute(builder: (context) => WelcomeScreen()),
     (Route<dynamic> route) => false,
   );
-}
-
-void _good(BuildContext context, dynamic likedData) {
-  // นำข้อมูลที่ได้ไลค์มาใช้งานต่อไป
-  print('Liked data: $likedData');
 }
 
 class ThailandNewData {
